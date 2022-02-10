@@ -18,7 +18,7 @@ import java.util.UUID;
 @Builder
 @Entity
 public class Beer {
-    @CreditCardNumber
+
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
