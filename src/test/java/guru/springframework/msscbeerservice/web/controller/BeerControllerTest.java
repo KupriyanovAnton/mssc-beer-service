@@ -29,7 +29,7 @@ class BeerControllerTest {
     @Test
     void saveNewBeer() throws Exception {
 
-        BeerDto beerDto = BeerDto.builder().build();
+        BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
         mockMvc.perform(post("/api/v1/beer/")
@@ -40,7 +40,7 @@ class BeerControllerTest {
 
     @Test
     void updateBeerById() throws Exception {
-        BeerDto beerDto = BeerDto.builder().build();
+        BeerDto beerDto = getValidBeerDto();
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
 
         mockMvc.perform(put("/api/v1/beer/" + UUID.randomUUID().toString())
